@@ -55,7 +55,7 @@ import eu.gateai.gateconnect.client.JSON;
 /**
  * DataSourceView
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-22T13:41:35.633205213+03:00[Europe/Sofia]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-17T13:56:16.367272784+03:00[Europe/Sofia]")
 public class DataSourceView {
   public static final String SERIALIZED_NAME_CREATION_DATE = "creationDate";
   @SerializedName(SERIALIZED_NAME_CREATION_DATE)
@@ -119,6 +119,10 @@ public class DataSourceView {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
   private TypeEnum type;
+
+  public static final String SERIALIZED_NAME_URL = "url";
+  @SerializedName(SERIALIZED_NAME_URL)
+  private String url;
 
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -211,6 +215,27 @@ public class DataSourceView {
   }
 
 
+  public DataSourceView url(String url) {
+    
+    this.url = url;
+    return this;
+  }
+
+   /**
+   * Get url
+   * @return url
+  **/
+  @javax.annotation.Nullable
+  public String getUrl() {
+    return url;
+  }
+
+
+  public void setUrl(String url) {
+    this.url = url;
+  }
+
+
   public DataSourceView links(Map<String, Link> links) {
     
     this.links = links;
@@ -254,12 +279,13 @@ public class DataSourceView {
         Objects.equals(this.modificationDate, dataSourceView.modificationDate) &&
         Objects.equals(this.id, dataSourceView.id) &&
         Objects.equals(this.type, dataSourceView.type) &&
+        Objects.equals(this.url, dataSourceView.url) &&
         Objects.equals(this.links, dataSourceView.links);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(creationDate, modificationDate, id, type, links);
+    return Objects.hash(creationDate, modificationDate, id, type, url, links);
   }
 
   @Override
@@ -270,6 +296,7 @@ public class DataSourceView {
     sb.append("    modificationDate: ").append(toIndentedString(modificationDate)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("    links: ").append(toIndentedString(links)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -297,6 +324,7 @@ public class DataSourceView {
     openapiFields.add("modificationDate");
     openapiFields.add("id");
     openapiFields.add("type");
+    openapiFields.add("url");
     openapiFields.add("_links");
 
     // a set of required properties/fields (JSON key names)
@@ -328,6 +356,9 @@ public class DataSourceView {
       }
       if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+      }
+      if ((jsonObj.get("url") != null && !jsonObj.get("url").isJsonNull()) && !jsonObj.get("url").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("url").toString()));
       }
   }
 

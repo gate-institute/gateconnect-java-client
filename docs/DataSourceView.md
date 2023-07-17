@@ -11,6 +11,7 @@
 |**modificationDate** | **OffsetDateTime** |  |  [optional] |
 |**id** | **UUID** |  |  [optional] |
 |**type** | [**TypeEnum**](#TypeEnum) |  |  [optional] |
+|**url** | **String** |  |  [optional] |
 |**links** | [**Map&lt;String, Link&gt;**](Link.md) |  |  [optional] |
 
 

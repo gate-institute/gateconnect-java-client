@@ -2,7 +2,7 @@
 
 Dataspace Connector
 - API version: 8.0.2
-  - Build date: 2023-06-22T13:41:35.633205213+03:00[Europe/Sofia]
+  - Build date: 2023-07-17T13:56:16.367272784+03:00[Europe/Sofia]
 
 IDS Connector reference implementation
 

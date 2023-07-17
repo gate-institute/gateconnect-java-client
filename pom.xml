@@ -5,7 +5,7 @@
     <artifactId>gateconnect-java-client</artifactId>
     <packaging>jar</packaging>
     <name>gateconnect-java-client</name>
-    <version>8.0.2</version>
+    <version>8.0.2-G2</version>
     <url>https://github.com/openapitools/openapi-generator</url>
     <description>OpenAPI Java</description>
     <scm>
@@ -350,4 +350,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spotless.version>2.27.2</spotless.version>
     </properties>
+    <distributionManagement>
+	            <repository>
+            <id>gate-github</id>
+            <name>GitHub gate-institute Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/gate-institute/gateconnect-java-client</url>
+        </repository>
+</distributionManagement>
 </project>

@@ -59,7 +59,7 @@ import eu.gateai.gateconnect.client.JSON;
 /**
  * Duty
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-22T13:41:35.633205213+03:00[Europe/Sofia]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-17T13:56:16.367272784+03:00[Europe/Sofia]")
 public class Duty extends Rule {
   public static final String SERIALIZED_NAME_AT_TYPE = "@type";
   @SerializedName(SERIALIZED_NAME_AT_TYPE)

@@ -7571,6 +7571,7 @@ components:
         id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         creationDate: 2000-01-23T04:56:07.000+00:00
         type: Database
+        url: url
       properties:
         creationDate:
           format: date-time
@@ -7585,6 +7586,8 @@ components:
           enum:
           - Database
           - REST
+          type: string
+        url:
           type: string
         _links:
           additionalProperties:
@@ -9448,6 +9451,7 @@ components:
             id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             creationDate: 2000-01-23T04:56:07.000+00:00
             type: Database
+            url: url
           - modificationDate: 2000-01-23T04:56:07.000+00:00
             _links:
               key:
@@ -9462,6 +9466,7 @@ components:
             id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             creationDate: 2000-01-23T04:56:07.000+00:00
             type: Database
+            url: url
         _links:
           key:
             hreflang: hreflang
@@ -11070,6 +11075,7 @@ components:
           id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           creationDate: 2000-01-23T04:56:07.000+00:00
           type: Database
+          url: url
         - modificationDate: 2000-01-23T04:56:07.000+00:00
           _links:
             key:
@@ -11084,6 +11090,7 @@ components:
           id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           creationDate: 2000-01-23T04:56:07.000+00:00
           type: Database
+          url: url
       properties:
         datasources:
           items:
