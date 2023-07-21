@@ -66,7 +66,7 @@ import com.google.gson.JsonParseException;
 
 import eu.gateai.gateconnect.client.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-17T13:56:16.367272784+03:00[Europe/Sofia]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:13:44.561612454+03:00[Europe/Sofia]")
 public class GetExampleUsagePolicyRequest extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(GetExampleUsagePolicyRequest.class.getName());
 

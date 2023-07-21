@@ -52,7 +52,7 @@ import eu.gateai.gateconnect.client.JSON;
 /**
  * ArtifactDesc
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-17T13:56:16.367272784+03:00[Europe/Sofia]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:13:44.561612454+03:00[Europe/Sofia]")
 public class ArtifactDesc {
   public static final String SERIALIZED_NAME_TITLE = "title";
   @SerializedName(SERIALIZED_NAME_TITLE)
@@ -89,6 +89,10 @@ public class ArtifactDesc {
   public static final String SERIALIZED_NAME_AUTOMATED_DOWNLOAD = "automatedDownload";
   @SerializedName(SERIALIZED_NAME_AUTOMATED_DOWNLOAD)
   private Boolean automatedDownload;
+
+  public static final String SERIALIZED_NAME_ARTIFACT_TYPE = "artifactType";
+  @SerializedName(SERIALIZED_NAME_ARTIFACT_TYPE)
+  private String artifactType;
 
   public ArtifactDesc() {
   }
@@ -274,6 +278,27 @@ public class ArtifactDesc {
   }
 
 
+  public ArtifactDesc artifactType(String artifactType) {
+    
+    this.artifactType = artifactType;
+    return this;
+  }
+
+   /**
+   * Get artifactType
+   * @return artifactType
+  **/
+  @javax.annotation.Nullable
+  public String getArtifactType() {
+    return artifactType;
+  }
+
+
+  public void setArtifactType(String artifactType) {
+    this.artifactType = artifactType;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -292,12 +317,13 @@ public class ArtifactDesc {
         Objects.equals(this.basicAuth, artifactDesc.basicAuth) &&
         Objects.equals(this.apiKey, artifactDesc.apiKey) &&
         Objects.equals(this.value, artifactDesc.value) &&
-        Objects.equals(this.automatedDownload, artifactDesc.automatedDownload);
+        Objects.equals(this.automatedDownload, artifactDesc.automatedDownload) &&
+        Objects.equals(this.artifactType, artifactDesc.artifactType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(title, description, remoteId, remoteAddress, accessUrl, basicAuth, apiKey, value, automatedDownload);
+    return Objects.hash(title, description, remoteId, remoteAddress, accessUrl, basicAuth, apiKey, value, automatedDownload, artifactType);
   }
 
   @Override
@@ -313,6 +339,7 @@ public class ArtifactDesc {
     sb.append("    apiKey: ").append(toIndentedString(apiKey)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("    automatedDownload: ").append(toIndentedString(automatedDownload)).append("\n");
+    sb.append("    artifactType: ").append(toIndentedString(artifactType)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -344,6 +371,7 @@ public class ArtifactDesc {
     openapiFields.add("apiKey");
     openapiFields.add("value");
     openapiFields.add("automatedDownload");
+    openapiFields.add("artifactType");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -394,6 +422,9 @@ public class ArtifactDesc {
       }
       if ((jsonObj.get("value") != null && !jsonObj.get("value").isJsonNull()) && !jsonObj.get("value").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("value").toString()));
+      }
+      if ((jsonObj.get("artifactType") != null && !jsonObj.get("artifactType").isJsonNull()) && !jsonObj.get("artifactType").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `artifactType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("artifactType").toString()));
       }
   }
 

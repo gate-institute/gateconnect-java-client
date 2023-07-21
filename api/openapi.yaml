@@ -4404,7 +4404,7 @@ paths:
           content:
             '*/*':
               schema:
-                type: object
+                type: string
           description: Ok
         "504":
           content:
@@ -7568,6 +7568,7 @@ components:
             title: title
             type: type
             deprecation: deprecation
+        driverClassName: driverClassName
         id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         creationDate: 2000-01-23T04:56:07.000+00:00
         type: Database
@@ -7588,6 +7589,8 @@ components:
           - REST
           type: string
         url:
+          type: string
+        driverClassName:
           type: string
         _links:
           additionalProperties:
@@ -8221,6 +8224,7 @@ components:
       type: object
     ArtifactDesc:
       example:
+        artifactType: artifactType
         apiKey:
           value: value
           key: key
@@ -8258,6 +8262,8 @@ components:
           type: string
         automatedDownload:
           type: boolean
+        artifactType:
+          type: string
       type: object
     ArtifactView:
       example:
@@ -9448,6 +9454,7 @@ components:
                 title: title
                 type: type
                 deprecation: deprecation
+            driverClassName: driverClassName
             id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             creationDate: 2000-01-23T04:56:07.000+00:00
             type: Database
@@ -9463,6 +9470,7 @@ components:
                 title: title
                 type: type
                 deprecation: deprecation
+            driverClassName: driverClassName
             id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             creationDate: 2000-01-23T04:56:07.000+00:00
             type: Database
@@ -11072,6 +11080,7 @@ components:
               title: title
               type: type
               deprecation: deprecation
+          driverClassName: driverClassName
           id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           creationDate: 2000-01-23T04:56:07.000+00:00
           type: Database
@@ -11087,6 +11096,7 @@ components:
               title: title
               type: type
               deprecation: deprecation
+          driverClassName: driverClassName
           id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           creationDate: 2000-01-23T04:56:07.000+00:00
           type: Database

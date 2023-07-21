@@ -690,7 +690,7 @@ public class Example {
 
 <a id="sendSearchMessage"></a>
 # **sendSearchMessage**
-> Object sendSearchMessage(recipient, limit, offset, body)
+> String sendSearchMessage(recipient, limit, offset, body)
 
 Perform full-text search.
 
@@ -722,7 +722,7 @@ public class Example {
     Integer offset = 0; // Integer | The offset value.
     String body = "body_example"; // String | 
     try {
-      Object result = apiInstance.sendSearchMessage(recipient, limit, offset, body);
+      String result = apiInstance.sendSearchMessage(recipient, limit, offset, body);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling MessagingApi#sendSearchMessage");
@@ -746,7 +746,7 @@ public class Example {
 
 ### Return type
 
-**Object**
+**String**
 
 ### Authorization
 

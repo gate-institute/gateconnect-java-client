@@ -1608,7 +1608,7 @@ public class MessagingApi {
      * @param limit The limit value. (required)
      * @param offset The offset value. (required)
      * @param body  (required)
-     * @return Object
+     * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1620,8 +1620,8 @@ public class MessagingApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public Object sendSearchMessage(URI recipient, Integer limit, Integer offset, String body) throws ApiException {
-        ApiResponse<Object> localVarResp = sendSearchMessageWithHttpInfo(recipient, limit, offset, body);
+    public String sendSearchMessage(URI recipient, Integer limit, Integer offset, String body) throws ApiException {
+        ApiResponse<String> localVarResp = sendSearchMessageWithHttpInfo(recipient, limit, offset, body);
         return localVarResp.getData();
     }
 
@@ -1632,7 +1632,7 @@ public class MessagingApi {
      * @param limit The limit value. (required)
      * @param offset The offset value. (required)
      * @param body  (required)
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1644,9 +1644,9 @@ public class MessagingApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> sendSearchMessageWithHttpInfo(URI recipient, Integer limit, Integer offset, String body) throws ApiException {
+    public ApiResponse<String> sendSearchMessageWithHttpInfo(URI recipient, Integer limit, Integer offset, String body) throws ApiException {
         okhttp3.Call localVarCall = sendSearchMessageValidateBeforeCall(recipient, limit, offset, body, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1670,10 +1670,10 @@ public class MessagingApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sendSearchMessageAsync(URI recipient, Integer limit, Integer offset, String body, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call sendSearchMessageAsync(URI recipient, Integer limit, Integer offset, String body, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = sendSearchMessageValidateBeforeCall(recipient, limit, offset, body, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

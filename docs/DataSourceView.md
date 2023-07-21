@@ -12,6 +12,7 @@
 |**id** | **UUID** |  |  [optional] |
 |**type** | [**TypeEnum**](#TypeEnum) |  |  [optional] |
 |**url** | **String** |  |  [optional] |
+|**driverClassName** | **String** |  |  [optional] |
 |**links** | [**Map&lt;String, Link&gt;**](Link.md) |  |  [optional] |
 
 

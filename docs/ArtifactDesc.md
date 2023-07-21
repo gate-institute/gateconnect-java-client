@@ -16,6 +16,7 @@
 |**apiKey** | [**AuthenticationDesc**](AuthenticationDesc.md) |  |  [optional] |
 |**value** | **String** |  |  [optional] |
 |**automatedDownload** | **Boolean** |  |  [optional] |
+|**artifactType** | **String** |  |  [optional] |
 
 
 
