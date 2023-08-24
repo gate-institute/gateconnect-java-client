@@ -325,18 +325,6 @@ public class JSON {
                                 getDiscriminatorValue(readElement, "type"));
                     }
           })
-                .registerTypeSelector(org.openapitools.client.model.SendMessage4RequestInner.class, new TypeSelector<org.openapitools.client.model.SendMessage4RequestInner>() {
-                    @Override
-                    public Class<? extends org.openapitools.client.model.SendMessage4RequestInner> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("Duty", org.openapitools.client.model.Duty.class);
-                        classByDiscriminatorValue.put("Permission", org.openapitools.client.model.Permission.class);
-                        classByDiscriminatorValue.put("Prohibition", org.openapitools.client.model.Prohibition.class);
-                        classByDiscriminatorValue.put("sendMessage_4_request_inner", org.openapitools.client.model.SendMessage4RequestInner.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "@type"));
-                    }
-          })
                 .registerTypeSelector(org.openapitools.client.model.Update6Request.class, new TypeSelector<org.openapitools.client.model.Update6Request>() {
                     @Override
                     public Class<? extends org.openapitools.client.model.Update6Request> getClassForElement(JsonElement readElement) {
@@ -513,7 +501,6 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.RuleIdsConstraintInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.SecurityRestrictionDesc.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.SecurityRestrictionDescAllOf.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.SendMessage4RequestInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.SubscriptionDesc.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.SubscriptionView.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.TruststoreDesc.CustomTypeAdapterFactory());

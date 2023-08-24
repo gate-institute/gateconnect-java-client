@@ -924,6 +924,8 @@ public class ApiClient {
             return RequestBody.create((File) obj, MediaType.parse(contentType));
         } else if ("text/plain".equals(contentType) && obj instanceof String) {
             return RequestBody.create((String) obj, MediaType.parse(contentType));
+        } else if (obj instanceof String) {
+            return RequestBody.create((String) obj, MediaType.parse(contentType));
         } else if (isJsonMime(contentType)) {
             String content;
             if (obj != null) {
@@ -932,8 +934,6 @@ public class ApiClient {
                 content = null;
             }
             return RequestBody.create(content, MediaType.parse(contentType));
-        } else if (obj instanceof String) {
-            return RequestBody.create((String) obj, MediaType.parse(contentType));
         } else {
             throw new ApiException("Content type \"" + contentType + "\" is not supported");
         }

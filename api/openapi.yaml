@@ -4397,7 +4397,7 @@ paths:
           application/json:
             schema:
               description: The search term.
-              type: string
+              type: object
         required: true
       responses:
         "200":
@@ -4614,7 +4614,7 @@ paths:
           content:
             '*/*':
               schema:
-                type: object
+                type: string
           description: Ok
         "504":
           content:
@@ -4751,9 +4751,7 @@ paths:
           application/json:
             schema:
               description: List of ids rules with an artifact id as target.
-              items:
-                $ref: '#/components/schemas/sendMessage_4_request_inner'
-              type: array
+              type: object
         required: true
       responses:
         "417":
@@ -7029,18 +7027,6 @@ components:
           type: string
       type: object
     Endpoint:
-      example:
-        modificationDate: 2000-01-23T04:56:07.000+00:00
-        bootstrapId: https://openapi-generator.tech
-        deleted: true
-        docs: https://openapi-generator.tech
-        additional:
-          key: additional
-        location: location
-        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        creationDate: 2000-01-23T04:56:07.000+00:00
-        type: type
-        info: info
       properties:
         id:
           format: uuid
@@ -7086,31 +7072,9 @@ components:
             deprecation: deprecation
         additional:
           key: additional
-        start:
-          modificationDate: 2000-01-23T04:56:07.000+00:00
-          bootstrapId: https://openapi-generator.tech
-          deleted: true
-          docs: https://openapi-generator.tech
-          additional:
-            key: additional
-          location: location
-          id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          creationDate: 2000-01-23T04:56:07.000+00:00
-          type: type
-          info: info
+        start: "{}"
         description: description
-        end:
-          modificationDate: 2000-01-23T04:56:07.000+00:00
-          bootstrapId: https://openapi-generator.tech
-          deleted: true
-          docs: https://openapi-generator.tech
-          additional:
-            key: additional
-          location: location
-          id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          creationDate: 2000-01-23T04:56:07.000+00:00
-          type: type
-          info: info
+        end: "{}"
         creationDate: 2000-01-23T04:56:07.000+00:00
         title: title
         deploy: None
@@ -7133,9 +7097,9 @@ components:
           - Camel
           type: string
         start:
-          $ref: '#/components/schemas/Endpoint'
+          type: object
         end:
-          $ref: '#/components/schemas/Endpoint'
+          type: object
         additional:
           additionalProperties:
             type: string
@@ -8474,31 +8438,9 @@ components:
                 deprecation: deprecation
             additional:
               key: additional
-            start:
-              modificationDate: 2000-01-23T04:56:07.000+00:00
-              bootstrapId: https://openapi-generator.tech
-              deleted: true
-              docs: https://openapi-generator.tech
-              additional:
-                key: additional
-              location: location
-              id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-              creationDate: 2000-01-23T04:56:07.000+00:00
-              type: type
-              info: info
+            start: "{}"
             description: description
-            end:
-              modificationDate: 2000-01-23T04:56:07.000+00:00
-              bootstrapId: https://openapi-generator.tech
-              deleted: true
-              docs: https://openapi-generator.tech
-              additional:
-                key: additional
-              location: location
-              id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-              creationDate: 2000-01-23T04:56:07.000+00:00
-              type: type
-              info: info
+            end: "{}"
             creationDate: 2000-01-23T04:56:07.000+00:00
             title: title
             deploy: None
@@ -8516,31 +8458,9 @@ components:
                 deprecation: deprecation
             additional:
               key: additional
-            start:
-              modificationDate: 2000-01-23T04:56:07.000+00:00
-              bootstrapId: https://openapi-generator.tech
-              deleted: true
-              docs: https://openapi-generator.tech
-              additional:
-                key: additional
-              location: location
-              id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-              creationDate: 2000-01-23T04:56:07.000+00:00
-              type: type
-              info: info
+            start: "{}"
             description: description
-            end:
-              modificationDate: 2000-01-23T04:56:07.000+00:00
-              bootstrapId: https://openapi-generator.tech
-              deleted: true
-              docs: https://openapi-generator.tech
-              additional:
-                key: additional
-              location: location
-              id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-              creationDate: 2000-01-23T04:56:07.000+00:00
-              type: type
-              info: info
+            end: "{}"
             creationDate: 2000-01-23T04:56:07.000+00:00
             title: title
             deploy: None
@@ -9268,7 +9188,8 @@ components:
           $ref: '#/components/schemas/PageMetadata'
       type: object
     StreamingResponseBody:
-      type: object
+      format: byte
+      type: string
     RepresentationModelObject:
       properties:
         _links:
@@ -9905,8 +9826,8 @@ components:
           key: additional
         description: description
         supportedPolicies:
-        - Provide unrestricted data access
-        - Provide unrestricted data access
+        - PROVIDE_ACCESS
+        - PROVIDE_ACCESS
         language: language
         distributionService: https://openapi-generator.tech
         creationDate: 2000-01-23T04:56:07.000+00:00
@@ -9946,16 +9867,16 @@ components:
         supportedPolicies:
           items:
             enum:
-            - Provide unrestricted data access
-            - Prohibit the data access
-            - Restrict the data usage to not more than N times
-            - Restrict the data usage to a specific time duration
-            - Restrict the data usage to a specific time interval
-            - Use data and delete it at a specific date time
-            - Log the data usage information
-            - Notify a party or a specific group of users when the data is used
-            - Restrict the data usage to a specific connector
-            - Restrict the data usage to a security profile
+            - PROVIDE_ACCESS
+            - PROHIBIT_ACCESS
+            - N_TIMES_USAGE
+            - DURATION_USAGE
+            - USAGE_DURING_INTERVAL
+            - USAGE_UNTIL_DELETION
+            - USAGE_LOGGING
+            - USAGE_NOTIFICATION
+            - CONNECTOR_RESTRICTED_USAGE
+            - SECURITY_PROFILE_RESTRICTED_USAGE
             type: string
           type: array
         keywords:
@@ -10013,8 +9934,8 @@ components:
               key: additional
             description: description
             supportedPolicies:
-            - Provide unrestricted data access
-            - Provide unrestricted data access
+            - PROVIDE_ACCESS
+            - PROVIDE_ACCESS
             language: language
             distributionService: https://openapi-generator.tech
             creationDate: 2000-01-23T04:56:07.000+00:00
@@ -10047,8 +9968,8 @@ components:
               key: additional
             description: description
             supportedPolicies:
-            - Provide unrestricted data access
-            - Provide unrestricted data access
+            - PROVIDE_ACCESS
+            - PROVIDE_ACCESS
             language: language
             distributionService: https://openapi-generator.tech
             creationDate: 2000-01-23T04:56:07.000+00:00
@@ -10283,11 +10204,6 @@ components:
         readOnly:
           type: boolean
       type: object
-    sendMessage_4_request_inner:
-      oneOf:
-      - $ref: '#/components/schemas/Duty'
-      - $ref: '#/components/schemas/Permission'
-      - $ref: '#/components/schemas/Prohibition'
     getExampleUsagePolicy_request:
       oneOf:
       - $ref: '#/components/schemas/PatternDesc'
@@ -10398,31 +10314,9 @@ components:
               deprecation: deprecation
           additional:
             key: additional
-          start:
-            modificationDate: 2000-01-23T04:56:07.000+00:00
-            bootstrapId: https://openapi-generator.tech
-            deleted: true
-            docs: https://openapi-generator.tech
-            additional:
-              key: additional
-            location: location
-            id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            creationDate: 2000-01-23T04:56:07.000+00:00
-            type: type
-            info: info
+          start: "{}"
           description: description
-          end:
-            modificationDate: 2000-01-23T04:56:07.000+00:00
-            bootstrapId: https://openapi-generator.tech
-            deleted: true
-            docs: https://openapi-generator.tech
-            additional:
-              key: additional
-            location: location
-            id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            creationDate: 2000-01-23T04:56:07.000+00:00
-            type: type
-            info: info
+          end: "{}"
           creationDate: 2000-01-23T04:56:07.000+00:00
           title: title
           deploy: None
@@ -10440,31 +10334,9 @@ components:
               deprecation: deprecation
           additional:
             key: additional
-          start:
-            modificationDate: 2000-01-23T04:56:07.000+00:00
-            bootstrapId: https://openapi-generator.tech
-            deleted: true
-            docs: https://openapi-generator.tech
-            additional:
-              key: additional
-            location: location
-            id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            creationDate: 2000-01-23T04:56:07.000+00:00
-            type: type
-            info: info
+          start: "{}"
           description: description
-          end:
-            modificationDate: 2000-01-23T04:56:07.000+00:00
-            bootstrapId: https://openapi-generator.tech
-            deleted: true
-            docs: https://openapi-generator.tech
-            additional:
-              key: additional
-            location: location
-            id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            creationDate: 2000-01-23T04:56:07.000+00:00
-            type: type
-            info: info
+          end: "{}"
           creationDate: 2000-01-23T04:56:07.000+00:00
           title: title
           deploy: None
@@ -11397,8 +11269,8 @@ components:
             key: additional
           description: description
           supportedPolicies:
-          - Provide unrestricted data access
-          - Provide unrestricted data access
+          - PROVIDE_ACCESS
+          - PROVIDE_ACCESS
           language: language
           distributionService: https://openapi-generator.tech
           creationDate: 2000-01-23T04:56:07.000+00:00
@@ -11431,8 +11303,8 @@ components:
             key: additional
           description: description
           supportedPolicies:
-          - Provide unrestricted data access
-          - Provide unrestricted data access
+          - PROVIDE_ACCESS
+          - PROVIDE_ACCESS
           language: language
           distributionService: https://openapi-generator.tech
           creationDate: 2000-01-23T04:56:07.000+00:00

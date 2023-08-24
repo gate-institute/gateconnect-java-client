@@ -24,7 +24,6 @@ import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
-import org.openapitools.client.model.Endpoint;
 import org.openapitools.client.model.Link;
 
 import com.google.gson.Gson;
@@ -55,7 +54,7 @@ import eu.gateai.gateconnect.client.JSON;
 /**
  * RouteView
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:13:44.561612454+03:00[Europe/Sofia]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-24T16:01:45.808576329+03:00[Europe/Sofia]")
 public class RouteView {
   public static final String SERIALIZED_NAME_CREATION_DATE = "creationDate";
   @SerializedName(SERIALIZED_NAME_CREATION_DATE)
@@ -130,11 +129,11 @@ public class RouteView {
 
   public static final String SERIALIZED_NAME_START = "start";
   @SerializedName(SERIALIZED_NAME_START)
-  private Endpoint start;
+  private Object start;
 
   public static final String SERIALIZED_NAME_END = "end";
   @SerializedName(SERIALIZED_NAME_END)
-  private Endpoint end;
+  private Object end;
 
   public static final String SERIALIZED_NAME_ADDITIONAL = "additional";
   @SerializedName(SERIALIZED_NAME_ADDITIONAL)
@@ -273,7 +272,7 @@ public class RouteView {
   }
 
 
-  public RouteView start(Endpoint start) {
+  public RouteView start(Object start) {
     
     this.start = start;
     return this;
@@ -284,17 +283,17 @@ public class RouteView {
    * @return start
   **/
   @javax.annotation.Nullable
-  public Endpoint getStart() {
+  public Object getStart() {
     return start;
   }
 
 
-  public void setStart(Endpoint start) {
+  public void setStart(Object start) {
     this.start = start;
   }
 
 
-  public RouteView end(Endpoint end) {
+  public RouteView end(Object end) {
     
     this.end = end;
     return this;
@@ -305,12 +304,12 @@ public class RouteView {
    * @return end
   **/
   @javax.annotation.Nullable
-  public Endpoint getEnd() {
+  public Object getEnd() {
     return end;
   }
 
 
-  public void setEnd(Endpoint end) {
+  public void setEnd(Object end) {
     this.end = end;
   }
 
@@ -482,14 +481,6 @@ public class RouteView {
       }
       if ((jsonObj.get("deploy") != null && !jsonObj.get("deploy").isJsonNull()) && !jsonObj.get("deploy").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `deploy` to be a primitive type in the JSON string but got `%s`", jsonObj.get("deploy").toString()));
-      }
-      // validate the optional field `start`
-      if (jsonObj.get("start") != null && !jsonObj.get("start").isJsonNull()) {
-        Endpoint.validateJsonObject(jsonObj.getAsJsonObject("start"));
-      }
-      // validate the optional field `end`
-      if (jsonObj.get("end") != null && !jsonObj.get("end").isJsonNull()) {
-        Endpoint.validateJsonObject(jsonObj.getAsJsonObject("end"));
       }
   }
 

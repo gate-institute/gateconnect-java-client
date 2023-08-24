@@ -315,7 +315,7 @@ public class Example {
 
 <a id="sendMessage4"></a>
 # **sendMessage4**
-> Object sendMessage4(recipient, resourceIds, artifactIds, download, sendMessage4RequestInner)
+> Object sendMessage4(recipient, resourceIds, artifactIds, download, body)
 
 Send an IDS ContractRequestMessage to start the contract negotiation.
 
@@ -344,9 +344,9 @@ public class Example {
     List<URI> resourceIds = Arrays.asList(); // List<URI> | List of ids resource that should be requested.
     List<URI> artifactIds = Arrays.asList(); // List<URI> | List of ids artifacts that should be requested.
     Boolean download = true; // Boolean | Indicates whether the connector should automatically download data of an artifact.
-    List<SendMessage4RequestInner> sendMessage4RequestInner = Arrays.asList(); // List<SendMessage4RequestInner> | 
+    Object body = null; // Object | 
     try {
-      Object result = apiInstance.sendMessage4(recipient, resourceIds, artifactIds, download, sendMessage4RequestInner);
+      Object result = apiInstance.sendMessage4(recipient, resourceIds, artifactIds, download, body);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling MessagingApi#sendMessage4");
@@ -367,7 +367,7 @@ public class Example {
 | **resourceIds** | [**List&lt;URI&gt;**](URI.md)| List of ids resource that should be requested. | |
 | **artifactIds** | [**List&lt;URI&gt;**](URI.md)| List of ids artifacts that should be requested. | |
 | **download** | **Boolean**| Indicates whether the connector should automatically download data of an artifact. | |
-| **sendMessage4RequestInner** | [**List&lt;SendMessage4RequestInner&gt;**](SendMessage4RequestInner.md)|  | |
+| **body** | **Object**|  | |
 
 ### Return type
 
@@ -615,7 +615,7 @@ public class Example {
 
 <a id="sendQueryMessage"></a>
 # **sendQueryMessage**
-> Object sendQueryMessage(recipient, body)
+> String sendQueryMessage(recipient, body)
 
 Send an IDS QueryMessage.
 
@@ -645,7 +645,7 @@ public class Example {
     URI recipient = new URI(); // URI | The recipient url.
     String body = "body_example"; // String | 
     try {
-      Object result = apiInstance.sendQueryMessage(recipient, body);
+      String result = apiInstance.sendQueryMessage(recipient, body);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling MessagingApi#sendQueryMessage");
@@ -667,7 +667,7 @@ public class Example {
 
 ### Return type
 
-**Object**
+**String**
 
 ### Authorization
 
@@ -720,7 +720,7 @@ public class Example {
     URI recipient = new URI(); // URI | The recipient url.
     Integer limit = 50; // Integer | The limit value.
     Integer offset = 0; // Integer | The offset value.
-    String body = "body_example"; // String | 
+    Object body = null; // Object | 
     try {
       String result = apiInstance.sendSearchMessage(recipient, limit, offset, body);
       System.out.println(result);
@@ -742,7 +742,7 @@ public class Example {
 | **recipient** | **URI**| The recipient url. | |
 | **limit** | **Integer**| The limit value. | [default to 50] |
 | **offset** | **Integer**| The offset value. | [default to 0] |
-| **body** | **String**|  | |
+| **body** | **Object**|  | |
 
 ### Return type
 

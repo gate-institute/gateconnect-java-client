@@ -5,7 +5,7 @@
     <artifactId>gateconnect-java-client</artifactId>
     <packaging>jar</packaging>
     <name>gateconnect-java-client</name>
-    <version>8.0.2-G2</version>
+    <version>8.0.2-G9</version>
     <url>https://github.com/openapitools/openapi-generator</url>
     <description>OpenAPI Java</description>
     <scm>

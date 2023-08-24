@@ -361,7 +361,7 @@ public class Example {
 
 <a id="getData"></a>
 # **getData**
-> Object getData(id, routeIds, URI)
+> byte[] getData(id, routeIds, URI)
 
 Get data by artifact id with query input.
 
@@ -390,7 +390,7 @@ public class Example {
     List<URI> routeIds = Arrays.asList(); // List<URI> | 
     List<URI> URI = Arrays.asList(); // List<URI> | 
     try {
-      Object result = apiInstance.getData(id, routeIds, URI);
+      byte[] result = apiInstance.getData(id, routeIds, URI);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ArtifactsApi#getData");
@@ -413,7 +413,7 @@ public class Example {
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 
@@ -432,7 +432,7 @@ public class Example {
 
 <a id="getData1"></a>
 # **getData1**
-> Object getData1(id, download, agreementUri, routeIds)
+> byte[] getData1(id, download, agreementUri, routeIds)
 
 Get data by artifact id with query input.
 
@@ -462,7 +462,7 @@ public class Example {
     URI agreementUri = new URI(); // URI | 
     List<URI> routeIds = Arrays.asList(); // List<URI> | 
     try {
-      Object result = apiInstance.getData1(id, download, agreementUri, routeIds);
+      byte[] result = apiInstance.getData1(id, download, agreementUri, routeIds);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ArtifactsApi#getData1");
@@ -486,7 +486,7 @@ public class Example {
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 

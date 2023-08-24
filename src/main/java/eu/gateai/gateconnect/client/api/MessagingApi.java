@@ -27,7 +27,6 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import org.openapitools.client.model.SendMessage4RequestInner;
 import org.openapitools.client.model.SubscriptionDesc;
 import java.net.URI;
 
@@ -695,7 +694,7 @@ public class MessagingApi {
      * @param resourceIds List of ids resource that should be requested. (required)
      * @param artifactIds List of ids artifacts that should be requested. (required)
      * @param download Indicates whether the connector should automatically download data of an artifact. (required)
-     * @param sendMessage4RequestInner  (required)
+     * @param body  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -711,7 +710,7 @@ public class MessagingApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sendMessage4Call(URI recipient, List<URI> resourceIds, List<URI> artifactIds, Boolean download, List<SendMessage4RequestInner> sendMessage4RequestInner, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call sendMessage4Call(URI recipient, List<URI> resourceIds, List<URI> artifactIds, Boolean download, Object body, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -725,7 +724,7 @@ public class MessagingApi {
             basePath = null;
         }
 
-        Object localVarPostBody = sendMessage4RequestInner;
+        Object localVarPostBody = body;
 
         // create path and map variables
         String localVarPath = "/api/ids/contract";
@@ -773,7 +772,7 @@ public class MessagingApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call sendMessage4ValidateBeforeCall(URI recipient, List<URI> resourceIds, List<URI> artifactIds, Boolean download, List<SendMessage4RequestInner> sendMessage4RequestInner, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call sendMessage4ValidateBeforeCall(URI recipient, List<URI> resourceIds, List<URI> artifactIds, Boolean download, Object body, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'recipient' is set
         if (recipient == null) {
             throw new ApiException("Missing the required parameter 'recipient' when calling sendMessage4(Async)");
@@ -794,12 +793,12 @@ public class MessagingApi {
             throw new ApiException("Missing the required parameter 'download' when calling sendMessage4(Async)");
         }
 
-        // verify the required parameter 'sendMessage4RequestInner' is set
-        if (sendMessage4RequestInner == null) {
-            throw new ApiException("Missing the required parameter 'sendMessage4RequestInner' when calling sendMessage4(Async)");
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new ApiException("Missing the required parameter 'body' when calling sendMessage4(Async)");
         }
 
-        return sendMessage4Call(recipient, resourceIds, artifactIds, download, sendMessage4RequestInner, _callback);
+        return sendMessage4Call(recipient, resourceIds, artifactIds, download, body, _callback);
 
     }
 
@@ -810,7 +809,7 @@ public class MessagingApi {
      * @param resourceIds List of ids resource that should be requested. (required)
      * @param artifactIds List of ids artifacts that should be requested. (required)
      * @param download Indicates whether the connector should automatically download data of an artifact. (required)
-     * @param sendMessage4RequestInner  (required)
+     * @param body  (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -825,8 +824,8 @@ public class MessagingApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public Object sendMessage4(URI recipient, List<URI> resourceIds, List<URI> artifactIds, Boolean download, List<SendMessage4RequestInner> sendMessage4RequestInner) throws ApiException {
-        ApiResponse<Object> localVarResp = sendMessage4WithHttpInfo(recipient, resourceIds, artifactIds, download, sendMessage4RequestInner);
+    public Object sendMessage4(URI recipient, List<URI> resourceIds, List<URI> artifactIds, Boolean download, Object body) throws ApiException {
+        ApiResponse<Object> localVarResp = sendMessage4WithHttpInfo(recipient, resourceIds, artifactIds, download, body);
         return localVarResp.getData();
     }
 
@@ -837,7 +836,7 @@ public class MessagingApi {
      * @param resourceIds List of ids resource that should be requested. (required)
      * @param artifactIds List of ids artifacts that should be requested. (required)
      * @param download Indicates whether the connector should automatically download data of an artifact. (required)
-     * @param sendMessage4RequestInner  (required)
+     * @param body  (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -852,8 +851,8 @@ public class MessagingApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> sendMessage4WithHttpInfo(URI recipient, List<URI> resourceIds, List<URI> artifactIds, Boolean download, List<SendMessage4RequestInner> sendMessage4RequestInner) throws ApiException {
-        okhttp3.Call localVarCall = sendMessage4ValidateBeforeCall(recipient, resourceIds, artifactIds, download, sendMessage4RequestInner, null);
+    public ApiResponse<Object> sendMessage4WithHttpInfo(URI recipient, List<URI> resourceIds, List<URI> artifactIds, Boolean download, Object body) throws ApiException {
+        okhttp3.Call localVarCall = sendMessage4ValidateBeforeCall(recipient, resourceIds, artifactIds, download, body, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -865,7 +864,7 @@ public class MessagingApi {
      * @param resourceIds List of ids resource that should be requested. (required)
      * @param artifactIds List of ids artifacts that should be requested. (required)
      * @param download Indicates whether the connector should automatically download data of an artifact. (required)
-     * @param sendMessage4RequestInner  (required)
+     * @param body  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -881,9 +880,9 @@ public class MessagingApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sendMessage4Async(URI recipient, List<URI> resourceIds, List<URI> artifactIds, Boolean download, List<SendMessage4RequestInner> sendMessage4RequestInner, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call sendMessage4Async(URI recipient, List<URI> resourceIds, List<URI> artifactIds, Boolean download, Object body, final ApiCallback<Object> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = sendMessage4ValidateBeforeCall(recipient, resourceIds, artifactIds, download, sendMessage4RequestInner, _callback);
+        okhttp3.Call localVarCall = sendMessage4ValidateBeforeCall(recipient, resourceIds, artifactIds, download, body, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -1431,7 +1430,7 @@ public class MessagingApi {
      * Can be used for querying an IDS component (e.g. the IDS Broker).
      * @param recipient The recipient url. (required)
      * @param body  (required)
-     * @return Object
+     * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1444,8 +1443,8 @@ public class MessagingApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public Object sendQueryMessage(URI recipient, String body) throws ApiException {
-        ApiResponse<Object> localVarResp = sendQueryMessageWithHttpInfo(recipient, body);
+    public String sendQueryMessage(URI recipient, String body) throws ApiException {
+        ApiResponse<String> localVarResp = sendQueryMessageWithHttpInfo(recipient, body);
         return localVarResp.getData();
     }
 
@@ -1454,7 +1453,7 @@ public class MessagingApi {
      * Can be used for querying an IDS component (e.g. the IDS Broker).
      * @param recipient The recipient url. (required)
      * @param body  (required)
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1467,9 +1466,9 @@ public class MessagingApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> sendQueryMessageWithHttpInfo(URI recipient, String body) throws ApiException {
+    public ApiResponse<String> sendQueryMessageWithHttpInfo(URI recipient, String body) throws ApiException {
         okhttp3.Call localVarCall = sendQueryMessageValidateBeforeCall(recipient, body, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1492,10 +1491,10 @@ public class MessagingApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sendQueryMessageAsync(URI recipient, String body, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call sendQueryMessageAsync(URI recipient, String body, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = sendQueryMessageValidateBeforeCall(recipient, body, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1518,7 +1517,7 @@ public class MessagingApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sendSearchMessageCall(URI recipient, Integer limit, Integer offset, String body, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call sendSearchMessageCall(URI recipient, Integer limit, Integer offset, Object body, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1576,7 +1575,7 @@ public class MessagingApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call sendSearchMessageValidateBeforeCall(URI recipient, Integer limit, Integer offset, String body, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call sendSearchMessageValidateBeforeCall(URI recipient, Integer limit, Integer offset, Object body, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'recipient' is set
         if (recipient == null) {
             throw new ApiException("Missing the required parameter 'recipient' when calling sendSearchMessage(Async)");
@@ -1620,7 +1619,7 @@ public class MessagingApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public String sendSearchMessage(URI recipient, Integer limit, Integer offset, String body) throws ApiException {
+    public String sendSearchMessage(URI recipient, Integer limit, Integer offset, Object body) throws ApiException {
         ApiResponse<String> localVarResp = sendSearchMessageWithHttpInfo(recipient, limit, offset, body);
         return localVarResp.getData();
     }
@@ -1644,7 +1643,7 @@ public class MessagingApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> sendSearchMessageWithHttpInfo(URI recipient, Integer limit, Integer offset, String body) throws ApiException {
+    public ApiResponse<String> sendSearchMessageWithHttpInfo(URI recipient, Integer limit, Integer offset, Object body) throws ApiException {
         okhttp3.Call localVarCall = sendSearchMessageValidateBeforeCall(recipient, limit, offset, body, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1670,7 +1669,7 @@ public class MessagingApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sendSearchMessageAsync(URI recipient, Integer limit, Integer offset, String body, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call sendSearchMessageAsync(URI recipient, Integer limit, Integer offset, Object body, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = sendSearchMessageValidateBeforeCall(recipient, limit, offset, body, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();

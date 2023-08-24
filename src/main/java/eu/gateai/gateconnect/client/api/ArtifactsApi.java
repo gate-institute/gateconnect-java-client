@@ -810,7 +810,7 @@ public class ArtifactsApi {
      * @param id  (required)
      * @param routeIds  (optional)
      * @param URI  (optional)
-     * @return Object
+     * @return byte[]
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -819,8 +819,8 @@ public class ArtifactsApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public Object getData(UUID id, List<URI> routeIds, List<URI> URI) throws ApiException {
-        ApiResponse<Object> localVarResp = getDataWithHttpInfo(id, routeIds, URI);
+    public byte[] getData(UUID id, List<URI> routeIds, List<URI> URI) throws ApiException {
+        ApiResponse<byte[]> localVarResp = getDataWithHttpInfo(id, routeIds, URI);
         return localVarResp.getData();
     }
 
@@ -830,7 +830,7 @@ public class ArtifactsApi {
      * @param id  (required)
      * @param routeIds  (optional)
      * @param URI  (optional)
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;byte[]&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -839,9 +839,9 @@ public class ArtifactsApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> getDataWithHttpInfo(UUID id, List<URI> routeIds, List<URI> URI) throws ApiException {
+    public ApiResponse<byte[]> getDataWithHttpInfo(UUID id, List<URI> routeIds, List<URI> URI) throws ApiException {
         okhttp3.Call localVarCall = getDataValidateBeforeCall(id, routeIds, URI, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<byte[]>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -861,10 +861,10 @@ public class ArtifactsApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getDataAsync(UUID id, List<URI> routeIds, List<URI> URI, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call getDataAsync(UUID id, List<URI> routeIds, List<URI> URI, final ApiCallback<byte[]> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getDataValidateBeforeCall(id, routeIds, URI, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<byte[]>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -959,7 +959,7 @@ public class ArtifactsApi {
      * @param download  (optional)
      * @param agreementUri  (optional)
      * @param routeIds  (optional)
-     * @return Object
+     * @return byte[]
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -968,8 +968,8 @@ public class ArtifactsApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public Object getData1(UUID id, Boolean download, URI agreementUri, List<URI> routeIds) throws ApiException {
-        ApiResponse<Object> localVarResp = getData1WithHttpInfo(id, download, agreementUri, routeIds);
+    public byte[] getData1(UUID id, Boolean download, URI agreementUri, List<URI> routeIds) throws ApiException {
+        ApiResponse<byte[]> localVarResp = getData1WithHttpInfo(id, download, agreementUri, routeIds);
         return localVarResp.getData();
     }
 
@@ -980,7 +980,7 @@ public class ArtifactsApi {
      * @param download  (optional)
      * @param agreementUri  (optional)
      * @param routeIds  (optional)
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;byte[]&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -989,9 +989,9 @@ public class ArtifactsApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> getData1WithHttpInfo(UUID id, Boolean download, URI agreementUri, List<URI> routeIds) throws ApiException {
+    public ApiResponse<byte[]> getData1WithHttpInfo(UUID id, Boolean download, URI agreementUri, List<URI> routeIds) throws ApiException {
         okhttp3.Call localVarCall = getData1ValidateBeforeCall(id, download, agreementUri, routeIds, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<byte[]>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1012,10 +1012,10 @@ public class ArtifactsApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getData1Async(UUID id, Boolean download, URI agreementUri, List<URI> routeIds, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call getData1Async(UUID id, Boolean download, URI agreementUri, List<URI> routeIds, final ApiCallback<byte[]> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getData1ValidateBeforeCall(id, download, agreementUri, routeIds, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<byte[]>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

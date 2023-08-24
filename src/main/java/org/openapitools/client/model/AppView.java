@@ -57,7 +57,7 @@ import eu.gateai.gateconnect.client.JSON;
 /**
  * AppView
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:13:44.561612454+03:00[Europe/Sofia]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-24T16:01:45.808576329+03:00[Europe/Sofia]")
 public class AppView {
   public static final String SERIALIZED_NAME_CREATION_DATE = "creationDate";
   @SerializedName(SERIALIZED_NAME_CREATION_DATE)
@@ -100,25 +100,25 @@ public class AppView {
    */
   @JsonAdapter(SupportedPoliciesEnum.Adapter.class)
   public enum SupportedPoliciesEnum {
-    PROVIDE_UNRESTRICTED_DATA_ACCESS("Provide unrestricted data access"),
+    PROVIDE_ACCESS("PROVIDE_ACCESS"),
     
-    PROHIBIT_THE_DATA_ACCESS("Prohibit the data access"),
+    PROHIBIT_ACCESS("PROHIBIT_ACCESS"),
     
-    RESTRICT_THE_DATA_USAGE_TO_NOT_MORE_THAN_N_TIMES("Restrict the data usage to not more than N times"),
+    N_TIMES_USAGE("N_TIMES_USAGE"),
     
-    RESTRICT_THE_DATA_USAGE_TO_A_SPECIFIC_TIME_DURATION("Restrict the data usage to a specific time duration"),
+    DURATION_USAGE("DURATION_USAGE"),
     
-    RESTRICT_THE_DATA_USAGE_TO_A_SPECIFIC_TIME_INTERVAL("Restrict the data usage to a specific time interval"),
+    USAGE_DURING_INTERVAL("USAGE_DURING_INTERVAL"),
     
-    USE_DATA_AND_DELETE_IT_AT_A_SPECIFIC_DATE_TIME("Use data and delete it at a specific date time"),
+    USAGE_UNTIL_DELETION("USAGE_UNTIL_DELETION"),
     
-    LOG_THE_DATA_USAGE_INFORMATION("Log the data usage information"),
+    USAGE_LOGGING("USAGE_LOGGING"),
     
-    NOTIFY_A_PARTY_OR_A_SPECIFIC_GROUP_OF_USERS_WHEN_THE_DATA_IS_USED("Notify a party or a specific group of users when the data is used"),
+    USAGE_NOTIFICATION("USAGE_NOTIFICATION"),
     
-    RESTRICT_THE_DATA_USAGE_TO_A_SPECIFIC_CONNECTOR("Restrict the data usage to a specific connector"),
+    CONNECTOR_RESTRICTED_USAGE("CONNECTOR_RESTRICTED_USAGE"),
     
-    RESTRICT_THE_DATA_USAGE_TO_A_SECURITY_PROFILE("Restrict the data usage to a security profile");
+    SECURITY_PROFILE_RESTRICTED_USAGE("SECURITY_PROFILE_RESTRICTED_USAGE");
 
     private String value;
 

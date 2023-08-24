@@ -34,16 +34,16 @@
 
 | Name | Value |
 |---- | -----|
-| PROVIDE_UNRESTRICTED_DATA_ACCESS | &quot;Provide unrestricted data access&quot; |
-| PROHIBIT_THE_DATA_ACCESS | &quot;Prohibit the data access&quot; |
-| RESTRICT_THE_DATA_USAGE_TO_NOT_MORE_THAN_N_TIMES | &quot;Restrict the data usage to not more than N times&quot; |
-| RESTRICT_THE_DATA_USAGE_TO_A_SPECIFIC_TIME_DURATION | &quot;Restrict the data usage to a specific time duration&quot; |
-| RESTRICT_THE_DATA_USAGE_TO_A_SPECIFIC_TIME_INTERVAL | &quot;Restrict the data usage to a specific time interval&quot; |
-| USE_DATA_AND_DELETE_IT_AT_A_SPECIFIC_DATE_TIME | &quot;Use data and delete it at a specific date time&quot; |
-| LOG_THE_DATA_USAGE_INFORMATION | &quot;Log the data usage information&quot; |
-| NOTIFY_A_PARTY_OR_A_SPECIFIC_GROUP_OF_USERS_WHEN_THE_DATA_IS_USED | &quot;Notify a party or a specific group of users when the data is used&quot; |
-| RESTRICT_THE_DATA_USAGE_TO_A_SPECIFIC_CONNECTOR | &quot;Restrict the data usage to a specific connector&quot; |
-| RESTRICT_THE_DATA_USAGE_TO_A_SECURITY_PROFILE | &quot;Restrict the data usage to a security profile&quot; |
+| PROVIDE_ACCESS | &quot;PROVIDE_ACCESS&quot; |
+| PROHIBIT_ACCESS | &quot;PROHIBIT_ACCESS&quot; |
+| N_TIMES_USAGE | &quot;N_TIMES_USAGE&quot; |
+| DURATION_USAGE | &quot;DURATION_USAGE&quot; |
+| USAGE_DURING_INTERVAL | &quot;USAGE_DURING_INTERVAL&quot; |
+| USAGE_UNTIL_DELETION | &quot;USAGE_UNTIL_DELETION&quot; |
+| USAGE_LOGGING | &quot;USAGE_LOGGING&quot; |
+| USAGE_NOTIFICATION | &quot;USAGE_NOTIFICATION&quot; |
+| CONNECTOR_RESTRICTED_USAGE | &quot;CONNECTOR_RESTRICTED_USAGE&quot; |
+| SECURITY_PROFILE_RESTRICTED_USAGE | &quot;SECURITY_PROFILE_RESTRICTED_USAGE&quot; |
 
 
 

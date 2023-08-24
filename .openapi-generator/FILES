@@ -138,7 +138,6 @@ docs/RuleIdsConstraintInner.md
 docs/RulesApi.md
 docs/SecurityRestrictionDesc.md
 docs/SecurityRestrictionDescAllOf.md
-docs/SendMessage4RequestInner.md
 docs/SubscriptionDesc.md
 docs/SubscriptionView.md
 docs/SubscriptionsApi.md
@@ -312,7 +311,6 @@ src/main/java/org/openapitools/client/model/RuleIdsAssetRefinement.java
 src/main/java/org/openapitools/client/model/RuleIdsConstraintInner.java
 src/main/java/org/openapitools/client/model/SecurityRestrictionDesc.java
 src/main/java/org/openapitools/client/model/SecurityRestrictionDescAllOf.java
-src/main/java/org/openapitools/client/model/SendMessage4RequestInner.java
 src/main/java/org/openapitools/client/model/SubscriptionDesc.java
 src/main/java/org/openapitools/client/model/SubscriptionView.java
 src/main/java/org/openapitools/client/model/TruststoreDesc.java

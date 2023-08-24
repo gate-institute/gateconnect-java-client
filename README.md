@@ -2,7 +2,7 @@
 
 Dataspace Connector
 - API version: 8.0.2
-  - Build date: 2023-07-21T15:13:44.561612454+03:00[Europe/Sofia]
+  - Build date: 2023-08-24T16:01:45.808576329+03:00[Europe/Sofia]
 
 IDS Connector reference implementation
 
@@ -428,7 +428,6 @@ Class | Method | HTTP request | Description
  - [RuleIdsConstraintInner](docs/RuleIdsConstraintInner.md)
  - [SecurityRestrictionDesc](docs/SecurityRestrictionDesc.md)
  - [SecurityRestrictionDescAllOf](docs/SecurityRestrictionDescAllOf.md)
- - [SendMessage4RequestInner](docs/SendMessage4RequestInner.md)
  - [SubscriptionDesc](docs/SubscriptionDesc.md)
  - [SubscriptionView](docs/SubscriptionView.md)
  - [TruststoreDesc](docs/TruststoreDesc.md)

@@ -13,8 +13,8 @@
 |**description** | **String** |  |  [optional] |
 |**_configuration** | **String** |  |  [optional] |
 |**deploy** | [**DeployEnum**](#DeployEnum) |  |  [optional] |
-|**start** | [**Endpoint**](Endpoint.md) |  |  [optional] |
-|**end** | [**Endpoint**](Endpoint.md) |  |  [optional] |
+|**start** | **Object** |  |  [optional] |
+|**end** | **Object** |  |  [optional] |
 |**additional** | **Map&lt;String, String&gt;** |  |  [optional] |
 |**links** | [**Map&lt;String, Link&gt;**](Link.md) |  |  [optional] |
 
