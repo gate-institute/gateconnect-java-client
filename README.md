@@ -1,5 +1,8 @@
 # gateconnect-java-client
 
+> [!WARNING]
+> This repository is now part of [gate-dsv1](https://github.com/gate-institute/gate-dsv1/tree/main/source/gateconnect-java-client)
+
 Dataspace Connector
 - API version: 8.0.2
   - Build date: 2023-08-24T16:01:45.808576329+03:00[Europe/Sofia]
